@@ -34,7 +34,8 @@ namespace DesignPatterns.PipelinePattern
         /// </summary>
         /// <param name="next">下一管道</param>
         /// <returns></returns>
-        public Pipeline SetNextPipeline(Pipeline next) {
+        public Pipeline SetNextPipeline(Pipeline next)
+        {
             this.next = next;
             return this;
         }

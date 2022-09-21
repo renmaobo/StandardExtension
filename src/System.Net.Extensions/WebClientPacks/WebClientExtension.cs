@@ -76,7 +76,8 @@ namespace System.Net.Extensions.WebClientPacks
         /// <param name="headers">报文头设置</param>
         /// <param name="encoding">返回数据编码格式</param>
         /// <returns></returns>
-        public static string HttpGet(this string url, Action<WebHeaderCollection> headers = default, Encoding encoding = default) {
+        public static string HttpGet(this string url, Action<WebHeaderCollection> headers = default, Encoding encoding = default)
+        {
             if (encoding == null)
                 encoding = Encoding.UTF8;
             return encoding.GetString(url.HttpGet(headers));
@@ -99,7 +100,8 @@ namespace System.Net.Extensions.WebClientPacks
         /// <param name="headers">报文头设置</param>
         /// <param name="encoding">返回数据编码格式</param>
         /// <returns></returns>
-        public static string HttpPost(this string url, byte[] requestBody, Action<WebHeaderCollection> headers, Encoding encoding = default) {
+        public static string HttpPost(this string url, byte[] requestBody, Action<WebHeaderCollection> headers, Encoding encoding = default)
+        {
             if (encoding == null)
                 encoding = Encoding.UTF8;
             return encoding.GetString(url.HttpPost(requestBody, headers));

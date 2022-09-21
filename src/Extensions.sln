@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Json.Extensions", "Json.Ext
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Net.Extensions", "System.Net.Extensions\System.Net.Extensions.csproj", "{4045E283-3349-4789-A0D7-C5C51B4F40D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Extensions", "DesignPatterns.Extensions\DesignPatterns.Extensions.csproj", "{759B1F31-8B49-4242-A8AC-55869FA4ECB5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4045E283-3349-4789-A0D7-C5C51B4F40D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4045E283-3349-4789-A0D7-C5C51B4F40D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4045E283-3349-4789-A0D7-C5C51B4F40D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{759B1F31-8B49-4242-A8AC-55869FA4ECB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{759B1F31-8B49-4242-A8AC-55869FA4ECB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{759B1F31-8B49-4242-A8AC-55869FA4ECB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{759B1F31-8B49-4242-A8AC-55869FA4ECB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

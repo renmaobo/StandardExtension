@@ -22,19 +22,21 @@ namespace DesignPatterns.PipelinePattern.Pipelines
     /// <summary>
     /// 回环管道接口
     /// </summary>
-    public abstract class LoopbackPipeline : Pipeline
+    public abstract class LoopbackPipeline<TpipelineContext> : Pipeline where TpipelineContext: PipelineContext
     {
         /// <summary>
         /// 过程
         /// </summary>
         /// <param name="context">环境运行参数</param>
         /// <returns></returns>
-        public override IPipelineResult Proccess(PipelineContext context)
+        public override void Proccess(PipelineContext context)
         {
-            IPipelineResult result;
-            result = this.Executing(context);
-            result = this.Executed(context);
-            return result;
+            this.Executing(context as TpipelineContext);
+
+            if (this.next != null)
+                this.next.Proccess(context);
+
+            this.Executed(context as TpipelineContext);
         }
 
         /// <summary>
@@ -42,14 +44,14 @@ namespace DesignPatterns.PipelinePattern.Pipelines
         /// </summary>
         /// <param name="context">环境运行参数</param>
         /// <returns></returns>
-        public abstract IPipelineResult Executing(PipelineContext context);
+        public abstract void Executing(TpipelineContext context);
 
         /// <summary>
         /// 执行后
         /// </summary>
         /// <param name="context">环境运行参数</param>
         /// <returns></returns>
-        public abstract IPipelineResult Executed(PipelineContext context);
+        public abstract void Executed(TpipelineContext context);
     }
 }
 

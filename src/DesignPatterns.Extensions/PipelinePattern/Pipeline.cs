@@ -45,7 +45,7 @@ namespace DesignPatterns.PipelinePattern
         /// </summary>
         /// <param name="input">环境运行参数</param>
         /// <returns></returns>
-        public abstract IPipelineResult Proccess(PipelineContext context);
+        public abstract void Proccess(PipelineContext context);
     }
 }
 

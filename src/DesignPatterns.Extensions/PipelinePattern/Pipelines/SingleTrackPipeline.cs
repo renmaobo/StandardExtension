@@ -24,8 +24,16 @@ namespace DesignPatterns.PipelinePattern.Pipelines
     /// <summary>
     /// 单项阀管道
     /// </summary>
-    public abstract class SingleTrackPipeline : Pipeline
+    public abstract class SingleTrackPipeline<TpipelineContext> : Pipeline where TpipelineContext : PipelineContext
     {
+        public override void Proccess(PipelineContext context)
+        {
+            this.Executing(context as TpipelineContext);
+            if (this.next != null)
+                this.next.Proccess(context);
+        }
+
+        public abstract void Executing(TpipelineContext context);
     }
 }
 

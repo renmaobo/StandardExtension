@@ -7,9 +7,11 @@
   <ItemGroup>
     <None Remove="PipelinePattern\" />
     <None Remove="PipelinePattern\Pipelines\" />
+    <None Remove="ProxyPattern\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="PipelinePattern\" />
     <Folder Include="PipelinePattern\Pipelines\" />
+    <Folder Include="ProxyPattern\" />
   </ItemGroup>
 </Project>
